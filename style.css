@@ -1,0 +1,116 @@
+/* Establecer los márgenes y rellenos de todos los elementos en 0 y utilizar el modelo de caja "border-box" para incluir el ancho del borde y el padding dentro del ancho total */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Establecer el alto mínimo del cuerpo a 100% del alto visible de la ventana y centrar vertical y horizontalmente los elementos internos */
+body {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: #260040;
+}
+
+/* Contenedor principal que tendrá un ancho máximo de 650px y ocupará el 100% del ancho disponible, además de tener una altura fija de 430px, fondo blanco, sombra y bordes redondeados y rojos*/
+.wrapper {
+  display: grid;
+  max-width: 650px;
+  width: 100%;
+  height: 430px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+  border: 10px solid red;
+}
+
+/* Establecer las propiedades del botón de navegación (anterior y siguiente), incluyendo su posición absoluta en relación al contenedor principal, su estilo de círculo con texto centrado, el color de fondo y el tamaño de la fuente, entre otras */
+.wrapper i.button {
+  position: absolute;
+  top: 19%;
+  transform: translateY(-50%);
+  height: 35px;
+  width: 35px;
+  background-color: #343f4f;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s linear;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* Reducir la escala del botón activo (presionado) y ajustar su posición verticalmente */
+i.button:active {
+  transform: scale(0.94) translateY(-50%);
+}
+
+/* Establecer la posición del botón "anterior" y "siguiente" en relación al contenedor principal */
+i#prev {
+  left: 10px;
+}
+i#next {
+  right: 10px;
+}
+
+/* Establecer la altura del contenedor de la imagen, su ancho máximo y ancho total, y hacer que el desbordamiento sea oculto para que no haya desbordamiento de imagen */
+.image-container {
+  height: 320px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Establecer el estilo del carrusel, que será un contenedor flexible de imágenes que cambiará su posición para mostrar la imagen actual, todo esto con una transición suave */
+.image-container .carousel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+  flex-wrap: nowrap;
+}
+
+/* Establecer el estilo de la imagen en el carrusel, incluyendo el tamaño de la imagen, el borde redondeado, el tamaño del borde, el ajuste de objeto y el hecho de que cubrirá el contenedor de imagen */
+
+.carousel img {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  border: 15px solid #fff;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+}
+
+/*Título*/
+.titulo {
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  font: normal 38px / normal "Warnes", Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  white-space: pre;
+  text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgba(255, 0, 0),
+    0 0 30px rgba(255, 0, 0), 0 0 40px #727272, 0 0 70px #727272,
+    0 0 80px #4e4e4e, 0 0 100px #2b2b2b;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.titulo:hover {
+  text-shadow: 0 0 10px rgb(69, 0, 109), 0 0 20px rgb(73, 0, 95),
+    0 0 30px rgb(57, 0, 68), 0 0 40px #580054, 0 0 70px #000000,
+    0 0 80px #000000, 0 0 100px #000000;
+}

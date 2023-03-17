@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slider de imágenes con JavaScript</title>
+    <link rel="icon" type="image/jpg" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  </head>
+  <body>
+    
+    <section class="wrapper">
+      <div class="titulo" title="made in entreunosyceros.net">Slider Imágenes</div>
+      
+      <div class="image-container"><!--contenedor imágenes-->
+        <i class="fa-solid fa-arrow-left button" id="prev"></i> <!--flecha izquierda-->
+        <div class="carousel"><!--carrusel de imágenes-->
+          <img src="images/image1.jpg" alt="Imagen 1">
+          <img src="images/image2.jpg" alt="Imagen 2">
+          <img src="images/image3.jpg" alt="Imagen 3">
+          <img src="images/image4.jpg" alt="Imagen 4">
+        </div>
+        <i class="fa-solid fa-arrow-right button" id="next"></i><!--flecha derecha-->
+      </div>
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
